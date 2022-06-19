@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+@include mat-core();
+
+// Primary colour
+$salad-app-primary: mat-palette($mat-blue);
+// Accent colour
+$salad-app-accent: mat-palette($mat-amber, A200, A100, A400);
+
+$my-app-theme: mat-light-theme($salad-app-primary, $salad-app-accent);
+@include angular-material-theme($my-app-theme);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

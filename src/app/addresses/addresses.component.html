@@ -1,0 +1,46 @@
+<div class="page-container">
+    <div class="title-container">
+        <div id="title">
+            Address List ({{addressTotal}})
+        </div>
+        <div>
+            <button id="add-new" mat-stroked-button class="add-button" (click)="openCreateDialog()"><mat-icon>add</mat-icon> Add New</button>
+        </div>
+    </div>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" class="table-header-txt">
+        <!-- Index Column -->
+        <ng-container matColumnDef="idx">
+            <th mat-header-cell *matHeaderCellDef>#</th>
+            <td mat-cell *matCellDef="let element; let i = index">
+                <span class="table-content-txt">{{ i + 1 }}</span>
+            </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef>Name</th>
+            <td mat-cell *matCellDef="let element">
+                <span class="table-content-txt">{{ element.name }}</span>
+            </td>
+        </ng-container>
+
+        <!-- Address Column -->
+        <ng-container matColumnDef="address">
+            <th mat-header-cell *matHeaderCellDef>Address</th>
+            <td mat-cell *matCellDef="let element">
+                <span class="table-content-txt">
+                    {{ element.details.sido }} 
+                    {{ element.details.sigungu }} 
+                    {{ element.details.roadAddress }}
+                    {{ element.details.extraAddress }}
+                </span>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+</div>
+
+

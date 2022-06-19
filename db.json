@@ -1,0 +1,24 @@
+{
+    "addresses": [
+        {
+            "id": 1,
+            "name": "EXAMPLE 1",
+            "details": {
+                "sido": "경기 성남시",
+                "sigungu": "분당구",
+                "roadAddress": "판교역로 235",
+                "extraAddress": "어느 건물 17-1"
+            }
+        },
+        {
+            "id": 2,
+            "name": "EXAMPLE 2",
+            "details": {
+                "sido": "경기 성남시",
+                "sigungu": "분당구",
+                "roadAddress": "판교역로 235",
+                "extraAddress": "어느 건물 17-2"
+            }
+        }
+    ]
+}
